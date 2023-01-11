@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import {Router, Request, Response } from 'express';
+import {Request, Response } from 'express';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
 (async () => {
@@ -49,7 +49,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   });
 
-  app.get( "/", async ( req, res ) => {
+  app.get( "/", async ( _req, res ) => {
     res.send("try GET /filteredimage?image_url={{}}")
   } );
   
